@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        ".venv": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".pytest_cache": true,
+        "**/__pycache__": true,
+    },
+    "python.analysis.typeCheckingMode": "basic"
+}

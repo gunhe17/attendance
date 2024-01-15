@@ -1,0 +1,5 @@
+fastapi
+firebase_admin
+
+black==23.10.1
+isort==5.12.0
