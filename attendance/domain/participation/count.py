@@ -1,5 +1,5 @@
 from attendance.domain.common.error.domain_error import (
-    EmptyValueError,
+    InvalidValueError,
     InvalidTypeError,
 )
 from attendance.domain.common.error.error_msg import (
@@ -20,7 +20,7 @@ class Count:
             raise InvalidTypeError(InvalidIntegerTypeErrorMsg.value())
 
         if number < 0:
-            raise EmptyValueError(InvalidNonNegativeValueErrorMsg.value())
+            raise InvalidValueError(InvalidNonNegativeValueErrorMsg.value())
 
         return cls(number)
 

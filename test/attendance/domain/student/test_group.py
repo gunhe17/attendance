@@ -1,5 +1,8 @@
+from attendance.domain.common.error.domain_error import (
+    EmptyValueError,
+    InvalidTypeError,
+)
 from attendance.domain.student.group import Group
-from attendance.domain.common.error.domain_error import InvalidTypeError, EmptyValueError
 
 
 def test_init_from_str():

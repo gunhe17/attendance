@@ -9,11 +9,14 @@ class DomainError(Exception):
 class EmptyValueError(DomainError):
     pass
 
+
 class InvalidTypeError(DomainError):
     pass
 
+
 class InvalidValueError(DomainError):
     pass
+
 
 class InvalidFormatError(DomainError):
     pass

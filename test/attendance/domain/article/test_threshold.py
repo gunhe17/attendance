@@ -1,11 +1,14 @@
 from attendance.domain.article.threshold import Threshold
-from attendance.domain.common.error.domain_error import InvalidTypeError, InvalidValueError
+from attendance.domain.common.error.domain_error import (
+    InvalidTypeError,
+    InvalidValueError,
+)
 
 
 def test_init_from_int():
     threshold = Threshold.from_int(0)
     assert isinstance(threshold, Threshold)
-    
+
 
 def test_init_from_int_invalid_type():
     try:

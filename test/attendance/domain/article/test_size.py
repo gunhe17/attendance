@@ -1,5 +1,8 @@
 from attendance.domain.article.size import Size
-from attendance.domain.common.error.domain_error import EmptyValueError, InvalidValueError
+from attendance.domain.common.error.domain_error import (
+    EmptyValueError,
+    InvalidValueError,
+)
 
 
 def test_init_from_str():

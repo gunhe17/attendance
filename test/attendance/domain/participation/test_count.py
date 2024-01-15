@@ -1,5 +1,8 @@
+from attendance.domain.common.error.domain_error import (
+    InvalidTypeError,
+    InvalidValueError,
+)
 from attendance.domain.participation.count import Count
-from attendance.domain.common.error.domain_error import InvalidTypeError, InvalidValueError
 
 
 def test_init_from_int():

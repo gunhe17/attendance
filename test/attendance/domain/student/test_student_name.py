@@ -1,5 +1,8 @@
+from attendance.domain.common.error.domain_error import (
+    EmptyValueError,
+    InvalidTypeError,
+)
 from attendance.domain.student.student_name import StudentName
-from attendance.domain.common.error.domain_error import InvalidTypeError, EmptyValueError
 
 
 def test_init_from_str():

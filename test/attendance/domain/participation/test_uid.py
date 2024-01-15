@@ -1,5 +1,9 @@
+from attendance.domain.common.error.domain_error import (
+    EmptyValueError,
+    InvalidFormatError,
+    InvalidTypeError,
+)
 from attendance.domain.participation.uid import Uid
-from attendance.domain.common.error.domain_error import InvalidTypeError, EmptyValueError, InvalidFormatError
 
 
 def test_init_from_str():
