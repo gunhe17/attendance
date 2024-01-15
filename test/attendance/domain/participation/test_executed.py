@@ -1,10 +1,18 @@
 import re
 
-from attendance.domain.common.error.domain_error import EmptyValueError, InvalidTypeError, InvalidFormatError
-from attendance.domain.common.error.error_msg import EmptyStringValueErrorMsg, InvalidStringTypeErrorMsg, InvalidExecutedFormatErrorMsg
+from attendance.domain.common.error.domain_error import (
+    EmptyValueError,
+    InvalidFormatError,
+    InvalidTypeError,
+)
+from attendance.domain.common.error.error_msg import (
+    EmptyStringValueErrorMsg,
+    InvalidExecutedFormatErrorMsg,
+    InvalidStringTypeErrorMsg,
+)
 
 
-class Uid:
+class Excuted:
     def __init__(self, text):
         self._text = text
 
@@ -17,8 +25,8 @@ class Uid:
 
         if len(text) == 0:
             raise EmptyValueError(EmptyStringValueErrorMsg.value())
-        
-        pattern = r'^[a-z0-9]{20}$'
+
+        pattern = r"\d{2}\.\d{2}\.\d{2}"
         if not re.match(pattern, text):
             raise InvalidFormatError(InvalidExecutedFormatErrorMsg.value())
 
