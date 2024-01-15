@@ -8,7 +8,7 @@ from attendance.domain.common.error.error_msg import (
 )
 
 
-class UserName:
+class StudentName:
     def __init__(self, text):
         self._text = text
 

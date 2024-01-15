@@ -4,7 +4,7 @@ from attendance.domain.common.error.domain_error import (
 )
 from attendance.domain.common.error.error_msg import (
     InvalidIntegerTypeErrorMsg,
-    InvalidPercentageValueErrorMsg,
+    InvalidNonNegativeValueErrorMsg,
 )
 
 
@@ -19,8 +19,8 @@ class Age:
         if not isinstance(number, int):
             raise InvalidTypeError(InvalidIntegerTypeErrorMsg.value())
 
-        if 0 <= number <= 100:
-            raise InvalidValueError(InvalidPercentageValueErrorMsg.value())
+        if number < 0:
+            raise InvalidValueError(InvalidNonNegativeValueErrorMsg.value())
 
         return cls(number)
 

@@ -26,6 +26,7 @@ class TellNumber:
         if len(text) == 0:
             raise EmptyValueError(EmptyStringValueErrorMsg.value())
 
+        print(text)
         pattern = r"010-\d{4}\-\d{4}"
         if not re.match(pattern, text):
             raise InvalidFormatError(InvalidTellNumberFormatErrorMsg.value())
