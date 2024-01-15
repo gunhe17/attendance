@@ -12,7 +12,7 @@ class EmptyValueError(DomainError):
 class InvalidTypeError(DomainError):
     pass
 
-class InvlidValueError(DomainError):
+class InvalidValueError(DomainError):
     pass
 
 class InvalidFormatError(DomainError):
