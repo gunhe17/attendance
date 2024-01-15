@@ -1,6 +1,6 @@
 from attendance.domain.common.error.domain_error import (
     InvalidTypeError,
-    InvlidValueError,
+    InvalidValueError,
 )
 from attendance.domain.common.error.error_msg import (
     InvalidIntegerTypeErrorMsg,
@@ -19,8 +19,8 @@ class Threshold:
         if not isinstance(number, int):
             raise InvalidTypeError(InvalidIntegerTypeErrorMsg.value())
 
-        if 0 <= number <= 100:
-            raise InvlidValueError(InvalidPercentageValueErrorMsg.value())
+        if not (0 <= number <= 100):
+            raise InvalidValueError(InvalidPercentageValueErrorMsg.value())
 
         return cls(number)
 

@@ -1,7 +1,7 @@
 from attendance.domain.common.error.domain_error import (
     EmptyValueError,
     InvalidTypeError,
-    InvlidValueError,
+    InvalidValueError,
 )
 from attendance.domain.common.error.error_msg import (
     EmptyStringValueErrorMsg,
@@ -24,8 +24,8 @@ class Size:
         if len(text) == 0:
             raise EmptyValueError(EmptyStringValueErrorMsg.value())
 
-        if text not in ["year", "week", "day"]:
-            raise InvlidValueError(InvalidSizeValueErrorMsg.value())
+        if text not in ["year", "month", "week", "day"]:
+            raise InvalidValueError(InvalidSizeValueErrorMsg.value())
 
         return cls(text)
 
